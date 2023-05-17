@@ -1,0 +1,45 @@
+// Import config
+@import 'config';
+
+// Import Gorko
+@import '../../node_modules/gorko/gorko.scss';
+
+// Global styles
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  color: inherit;
+}
+
+html {
+  font-size: 15px;
+  color: get-color('primary');
+
+  @include apply-utility('font', 'base');
+}
+
+body {
+  margin: 0;
+  @include apply-utility('bg', 'light');
+}
+
+main {
+  display: grid;
+  padding: get-size('400');
+  place-items: center;
+  min-height: 100vh;
+
+  @media (max-width: 48em) {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+}
+
+// Import blocks and utilities
+@import 'blocks/card';
+@import 'blocks/attribution';
+@import 'utilities/visually-hidden';
+@import 'utilities/radius';
+@import 'utilities/flow';
+@import 'utilities/box-shadow';

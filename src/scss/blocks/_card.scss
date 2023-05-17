@@ -1,0 +1,26 @@
+.card {
+  text-align: center;
+  font-size: get-size('600');
+  padding: get-size('300');
+  padding-bottom: get-size('900');
+  max-width: 30rem;
+
+  @include apply-utility('bg', 'light-glare');
+  @include apply-utility('radius', '500');
+
+  &__image {
+    @include apply-utility('width', 'full');
+    @include apply-utility('radius', '400');
+  }
+
+  &__summary {
+    font-size: get-size('700');
+    margin: 0 get-size('400') 0 get-size('400');
+    @include apply-utility('weight', 'bold');
+  }
+
+  &__description {
+    margin: 0 get-size('400') 0 get-size('400');
+    color: get-color('light-shade');
+  }
+}
