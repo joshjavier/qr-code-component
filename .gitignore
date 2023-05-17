@@ -14,3 +14,8 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
+
+# Don't include node modules and outputs
+node_modules
+dist
+src/_includes/css

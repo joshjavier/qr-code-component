@@ -1,0 +1,19 @@
+{
+  "name": "qr-code-component-main",
+  "version": "1.0.0",
+  "scripts": {
+    "sass:watch": "sass --watch src/scss:src/_includes/css",
+    "sass:build": "sass --style=compressed src/scss:src/_includes/css",
+    "build": "npm run sass:build && eleventy",
+    "start": "npm run sass:build && concurrently \"npm run sass:watch\" \"eleventy --serve\""
+  },
+  "author": "Josh Javier",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "concurrently": "^8.0.1",
+    "djlint": "^1.27.2",
+    "gorko": "^0.9.1",
+    "prettier": "2.8.8",
+    "sass": "^1.62.1"
+  }
+}
