@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code component | A Frontend Mentor Challenge</title>
+    <meta name="description"
+          content="A simple solution to Frontend Mentor's QR code component challenge using 11ty, Sass, and Gorko" />
+
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="./images/favicon-32x32.png">
+
+    <style>.bg-dark{background:#1a1a1a}.bg-light{background:hsl(212, 46%, 89%)}.bg-light-glare{background:hsl(0, 0%, 100%)}.bg-light-shade{background:hsl(220, 15%, 55%)}.bg-primary{background:hsl(218, 44%, 22%)}.color-dark{color:#1a1a1a}.color-light{color:hsl(212, 46%, 89%)}.color-light-glare{color:hsl(0, 0%, 100%)}.color-light-shade{color:hsl(220, 15%, 55%)}.color-primary{color:hsl(218, 44%, 22%)}.box-block{display:block}.box-flex{display:flex}.box-hide{display:none}.box-show{display:inherit}.font-base{font-family:Outfit, sans-serif}.gap-top-300{margin-top:0.8rem}.gap-top-400{margin-top:1rem}.gap-top-500{margin-top:1.25rem}.gap-top-600{margin-top:1.6rem}.gap-top-700{margin-top:2rem}.gap-top-900{margin-top:3rem}.gap-right-300{margin-right:0.8rem}.gap-right-400{margin-right:1rem}.gap-right-500{margin-right:1.25rem}.gap-right-600{margin-right:1.6rem}.gap-right-700{margin-right:2rem}.gap-right-900{margin-right:3rem}.gap-bottom-300{margin-bottom:0.8rem}.gap-bottom-400{margin-bottom:1rem}.gap-bottom-500{margin-bottom:1.25rem}.gap-bottom-600{margin-bottom:1.6rem}.gap-bottom-700{margin-bottom:2rem}.gap-bottom-900{margin-bottom:3rem}.gap-left-300{margin-left:0.8rem}.gap-left-400{margin-left:1rem}.gap-left-500{margin-left:1.25rem}.gap-left-600{margin-left:1.6rem}.gap-left-700{margin-left:2rem}.gap-left-900{margin-left:3rem}.pad-top-300{padding-top:0.8rem}.pad-top-400{padding-top:1rem}.pad-top-500{padding-top:1.25rem}.pad-top-600{padding-top:1.6rem}.pad-top-700{padding-top:2rem}.pad-top-900{padding-top:3rem}.pad-right-300{padding-right:0.8rem}.pad-right-400{padding-right:1rem}.pad-right-500{padding-right:1.25rem}.pad-right-600{padding-right:1.6rem}.pad-right-700{padding-right:2rem}.pad-right-900{padding-right:3rem}.pad-bottom-300{padding-bottom:0.8rem}.pad-bottom-400{padding-bottom:1rem}.pad-bottom-500{padding-bottom:1.25rem}.pad-bottom-600{padding-bottom:1.6rem}.pad-bottom-700{padding-bottom:2rem}.pad-bottom-900{padding-bottom:3rem}.pad-left-300{padding-left:0.8rem}.pad-left-400{padding-left:1rem}.pad-left-500{padding-left:1.25rem}.pad-left-600{padding-left:1.6rem}.pad-left-700{padding-left:2rem}.pad-left-900{padding-left:3rem}.radius-300{border-radius:0.8rem}.radius-400{border-radius:1rem}.radius-500{border-radius:1.25rem}.radius-600{border-radius:1.6rem}.radius-700{border-radius:2rem}.radius-900{border-radius:3rem}.stack-300{z-index:0}.stack-400{z-index:10}.stack-500{z-index:20}.stack-600{z-index:30}.stack-700{z-index:40}.text-300{font-size:0.8rem}.text-400{font-size:1rem}.text-500{font-size:1.25rem}.text-600{font-size:1.6rem}.text-700{font-size:2rem}.text-900{font-size:3rem}.weight-light{font-weight:300}.weight-regular{font-weight:400}.weight-bold{font-weight:700}.width-full{width:100%}.width-half{width:50%}.width-quarter{width:25%}.width-third{width:33.3333333333%}@media(min-width: 36em){.sm\:box-block{display:block}.sm\:box-flex{display:flex}.sm\:box-hide{display:none}.sm\:box-show{display:inherit}.sm\:text-300{font-size:0.8rem}.sm\:text-400{font-size:1rem}.sm\:text-500{font-size:1.25rem}.sm\:text-600{font-size:1.6rem}.sm\:text-700{font-size:2rem}.sm\:text-900{font-size:3rem}.sm\:width-full{width:100%}.sm\:width-half{width:50%}.sm\:width-quarter{width:25%}.sm\:width-third{width:33.3333333333%}}@media(min-width: 48em){.md\:box-block{display:block}.md\:box-flex{display:flex}.md\:box-hide{display:none}.md\:box-show{display:inherit}.md\:text-300{font-size:0.8rem}.md\:text-400{font-size:1rem}.md\:text-500{font-size:1.25rem}.md\:text-600{font-size:1.6rem}.md\:text-700{font-size:2rem}.md\:text-900{font-size:3rem}.md\:width-full{width:100%}.md\:width-half{width:50%}.md\:width-quarter{width:25%}.md\:width-third{width:33.3333333333%}}@media(min-width: 62em){.lg\:box-block{display:block}.lg\:box-flex{display:flex}.lg\:box-hide{display:none}.lg\:box-show{display:inherit}.lg\:text-300{font-size:0.8rem}.lg\:text-400{font-size:1rem}.lg\:text-500{font-size:1.25rem}.lg\:text-600{font-size:1.6rem}.lg\:text-700{font-size:2rem}.lg\:text-900{font-size:3rem}.lg\:width-full{width:100%}.lg\:width-half{width:50%}.lg\:width-quarter{width:25%}.lg\:width-third{width:33.3333333333%}}*{box-sizing:border-box;font-family:inherit;color:inherit}html{font-size:15px;color:#1f3251;font-family:Outfit, sans-serif}body{margin:0;background:hsl(212, 46%, 89%)}main{display:grid;padding:1rem;place-items:center;min-height:100vh}@media(max-width: 48em){main{padding-top:5em;padding-bottom:5em}}.card{text-align:center;font-size:1.6rem;padding:.8rem;padding-bottom:3rem;max-width:30rem;background:hsl(0, 0%, 100%);border-radius:1.25rem}.card__image{width:100%;border-radius:1rem}.card__summary{font-size:2rem;margin:0 1rem 0 1rem;font-weight:700}.card__description{margin:0 1rem 0 1rem;color:#7b879d}.attribution{background:rgba(214,226,240,.8);text-align:center;padding:1rem;display:relative;position:fixed;bottom:0;left:0;right:0}.attribution a{color:#3e52a3;padding:2px;position:relative;text-decoration:none;font-weight:700}.attribution a::before{content:"";background:rgba(83,178,213,.75);position:absolute;left:0;bottom:3px;width:100%;height:8px;z-index:-1;transition:all .2s ease-in-out}.attribution a:hover::before,.attribution a:focus::before{bottom:0;height:100%}.visually-hidden:not(:focus):not(:active){border:0;clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}.radius{border-radius:.8rem}.flow>*+*{margin-top:var(--flow-space, 1.6rem)}.box-shadow{--shadow-color: 213deg 19% 66%;--shadow-elevation-low: 0.3px 0.3px 0.6px hsl(var(--shadow-color) / 0.09), 0.4px 0.5px 0.9px -0.5px hsl(var(--shadow-color) / 0.18), 0.8px 1.1px 1.8px -1px hsl(var(--shadow-color) / 0.27);--shadow-elevation-medium: 0.3px 0.3px 0.6px hsl(var(--shadow-color) / 0.1), 0.9px 1.2px 2px -0.3px hsl(var(--shadow-color) / 0.17), 1.9px 2.5px 4.2px -0.7px hsl(var(--shadow-color) / 0.23), 4.2px 5.4px 9.2px -1px hsl(var(--shadow-color) / 0.3);--shadow-elevation-high: 0.3px 0.3px 0.6px hsl(var(--shadow-color) / 0.09), 1.5px 1.9px 3.2px -0.1px hsl(var(--shadow-color) / 0.12), 2.6px 3.3px 5.6px -0.3px hsl(var(--shadow-color) / 0.15), 3.9px 5px 8.5px -0.4px hsl(var(--shadow-color) / 0.19), 5.7px 7.3px 12.4px -0.6px hsl(var(--shadow-color) / 0.22), 8.2px 10.5px 17.9px -0.7px hsl(var(--shadow-color) / 0.25), 11.7px 15.1px 25.6px -0.9px hsl(var(--shadow-color) / 0.28), 16.6px 21.3px 36.3px -1px hsl(var(--shadow-color) / 0.31);box-shadow:var(--shadow-elevation-medium)}/*# sourceMappingURL=global.css.map */
+</style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+          rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1 class="visually-hidden">QR Card Component</h1>
+      <article class="card flow box-shadow">
+  <img class="card__image"
+       src="./images/image-qr-code.png"
+       alt="QR code to Frontend Mentor homepage" />
+  <p class="card__summary">Improve your front-end skills by building projects</p>
+  <p class="card__description">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+</article>
+
+    </main>
+
+    
+      <footer>
+        <div class="attribution">
+  Challenge by
+  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://joshjavier.com/">Josh Javier</a>.
+</div>
+
+      </footer>
+    
+  </body>
+</html>
